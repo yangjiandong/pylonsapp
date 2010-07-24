@@ -25,7 +25,6 @@ pylons 0.9.7
 
    或先运行D:\workspace\python\workspace\myenv\0.97\env\Scripts\activate.bat，设置虚拟路径优先
 
-
 2. easy_install
 
    easy_install -f http://pylonshq.com/download/0.9.6.2/ "Pylons==0.9.6.2"
@@ -37,12 +36,25 @@ pylons 0.9.7
    set HTTP_PROXY=http://your.proxy.com:yourPort
    export HTTP_PROXY="http://user:password@yourproxy.com:port"
 
+   直接下载SQLAlchemy-0.5.8.tar.gz
+   easy_install SQLAlchemy
+
 3. git
 
-   增加git仓库 http://github.com/yangjiandong/sshapp
+   增加git仓库 http://github.com/yangjiandong/sshapp(需在网页上新增)
    git remote add origin git@github.com:yangjiandong/pythonapp.git
 
    git push origin master:refs/heads/master
+
+   git branch 0.9.7
+   git checkout 0.9.7
+
+4. run
+
+   先运行0.97的虚拟环境
+   env/Scripts/activate.bat
+
+   paster serve --reload development.ini
 
 
    --END
