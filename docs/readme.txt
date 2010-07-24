@@ -39,10 +39,12 @@ pylons 0.9.7
 
 3. git
 
-   增加git仓库 http://github.com/yangjiandong/sshapp
-   git remote add origin git@github.com:yangjiandong/pythonapp.git
+   增加git仓库 http://github.com/yangjiandong/pylonsapp
+   git remote add origin git@github.com:yangjiandong/pylonsapp.git
 
    git push origin master:refs/heads/master
 
+   git branch 0.9.7
+   git checkout 0.9.7
 
    --END
