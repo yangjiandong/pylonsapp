@@ -5,5 +5,8 @@
 
    http://pylonsbook.com/en/1.1/exploring-pylons.html#understanding-how-http-works
 
+   22:50 - 23:19
+
+   http://pylonsbook.com/en/1.1/exploring-pylons.html#understanding-pylons-globals
 
    --END
