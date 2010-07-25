@@ -1,29 +1,23 @@
 # use glob syntax.
 syntax: glob
-*.ser
-*.class
-*~
-*.bak
-*.off
-*.old
-.DS_Store
-spy.log
-*.pyc
-
-# logs
-logs
-derby.log
-lift_example
-
-# building
-target
+*.mo
+*.egg-info
+*.egg
+*.EGG
+*.EGG-INFO
+bin
 build
-null
-tmp*
+develop-eggs
+downloads
+eggs
+fake-eggs
+parts
 dist
-test-output
-
-# other scm
+.installed.cfg
+.mr.developer.cfg
+.hg
+.bzr
 .svn
-.CVS
-.hg*
+*.pyc
+*.pyo
+*.tmp*
