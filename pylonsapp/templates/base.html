@@ -1,0 +1,14 @@
+<%
+# http://pylonsbook.com/en/1.1/using-view-templates.html#simple-inheritance
+%>
+<html>
+    <head>
+        <title>${self.title()}</title>
+    </head>
+    <body>
+        ${self.body()}
+        <div class="footer">
+            <p>This is a simple page footer | copyright 2010</p>
+        </div>
+    </body>
+</html>

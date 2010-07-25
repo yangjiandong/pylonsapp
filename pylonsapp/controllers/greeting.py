@@ -26,7 +26,10 @@ class GreetingController(BaseController):
                    ]
 
         #return render('/greeting.html', extra_vars={'name':name})
-        return render('/greeting.html')
+        return render('/section.html')
 
     def context(self):
         return render('/context.html')
+
+    def navigation(self):
+        return render('/navigation.html')

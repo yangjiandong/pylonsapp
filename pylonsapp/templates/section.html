@@ -1,0 +1,12 @@
+<%inherit file="/base.html"/>
+<%namespace file="/navigation.html" import="navigation_links" />
+
+${navigation_links('James', links = [
+    ('James', 'http://jimmyg.org'),
+    ('Ben', 'http://groovie.org'),
+    ('Philip', 'http://groovie.org')
+])}
+
+${self.body()}
+
+<%def name="title()">User Administration</%def>

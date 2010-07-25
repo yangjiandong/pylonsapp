@@ -21,3 +21,4 @@ dist
 *.pyc
 *.pyo
 *.tmp*
+data/templates
