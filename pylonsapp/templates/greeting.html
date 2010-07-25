@@ -1,0 +1,51 @@
+<%!
+    import datetime
+%>
+
+<html>
+<head>
+    <title>Greetings2</title>
+</head>
+<body>
+    <h1>Greetings</h1>
+    <%
+    # c.greeting 处理为 h.literal('<b>Welcome</b>')
+    %>
+    <p>${c.greeting} Hello ${c.name}!</p>
+    <p>${c.greeting} Hello ${c.name3}!</p>
+    <p>${c.greeting} Hello ${c.name4}!</p>
+    <p>${c.greeting} Hello ${c.name5}!</p>
+
+<ul>
+% for item in c.links:
+    <li>\
+% if item[1]:
+    <a href="${item[1]}">${item[0]}</a>\
+% else:
+    ${item[0]}\
+% endif
+    </li>
+% endfor
+</ul>
+
+<%
+    title = 'Pylons Developer'
+    names = [x[0] for x in c.links]
+%>
+% for i, value in enumerate(names):
+${i+1}. ${value} <br />
+% endfor
+
+Your title is ${title}
+   <%
+         # This block can have any indentation as long as the Python
+         #  code within it is properly indented
+         if title == 'Pylons Developer':
+             msg = 'You must program in Python!'
+         else:
+             msg = ''
+     %>
+An optional message: ${msg}
+
+</body>
+</html>

@@ -29,3 +29,24 @@ class HelloController(BaseController):
             result +='%s:%r <br/>'%(key, value)
         result += '</body></html>'
         return result
+
+    # use helper
+    def environ2(self):
+        response.content_type='text/plain'
+        return h.format_environ(request.environ)
+
+    def test_abort(self):
+        username = request.environ.get('REMOTE_USER')
+        if not username:
+            abort(401)
+        else:
+            return "Hello %s" %username
+
+    # 公共变量
+    def app_globals_test(self):
+        app_globals.visits +=1
+        return "You are visitor numer %s." %app_globals.visits
+
+    def debugger(self):
+        value = "some value"
+        raise Exception("Just testing the interactive debugger!")

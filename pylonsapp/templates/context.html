@@ -1,0 +1,12 @@
+<html>
+<body>
+<%
+    context.write('<p>Here is an example:</p>')
+%>
+<p>
+% for key in context.keys():
+The key is <tt>${key}</tt>, the value is ${str(context.get(key))}. <br />
+% endfor
+</p>
+</body>
+</html>

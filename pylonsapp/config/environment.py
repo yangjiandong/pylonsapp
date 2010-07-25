@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Pylons environment configuration"""
 import os
 
@@ -34,8 +35,9 @@ def load_environment(global_conf, app_conf):
         directories=paths['templates'],
         error_handler=handle_mako_error,
         module_directory=os.path.join(app_conf['cache_dir'], 'templates'),
-        input_encoding='utf-8', default_filters=['escape'],
-        imports=['from webhelpers.html import escape'])
+        input_encoding='utf-8', output_encoding='utf-8',
+        imports=['from webhelpers.html import escape'],
+        default_filters=['escape'])
 
     # Setup the SQLAlchemy database engine
     engine = engine_from_config(config, 'sqlalchemy.')
@@ -43,3 +45,6 @@ def load_environment(global_conf, app_conf):
 
     # CONFIGURATION OPTIONS HERE (note: all config options will override
     # any Pylons config options)
+
+    # 采用明确取值 http://pylonsbook.com/en/1.1/exploring-pylons.html#context-object
+    config['pylons.strict_c'] = True

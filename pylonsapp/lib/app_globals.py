@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """The application's Globals object"""
 
 class Globals(object):
@@ -13,3 +14,4 @@ class Globals(object):
         'app_globals' variable
 
         """
+        self.visits = 0

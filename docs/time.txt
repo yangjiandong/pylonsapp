@@ -1,3 +1,12 @@
+2010.07.25
+-----------
+
+1. 15:42 - 16:16
+   16:40 - 17:07
+   17:15 - 17:57
+   http://pylonsbook.com/en/1.1/using-view-templates.html#applying-filters-in-templates
+
+
 2010.07.24
 -----------
 

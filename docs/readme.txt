@@ -1,6 +1,32 @@
 pylons 0.9.7
 ===============
 
+2010.07.25
+----------
+
+1. 编译器
+   pypy http://pypy.org/download.html#with-a-jit-compiler
+
+2、track down
+
+   http://localhost:5000/_debug/view/1280047011
+                                         |
+                                      根据Extra Data 显示 paste.evalexception.debug_count
+
+3. template
+config/environment.py
+# Create the Mako TemplateLookup, with the default autoescaping
+config['pylons.app_globals'].mako_lookup = TemplateLookup(
+    directories=paths['templates'],
+    ...
+)
+
+4. controller
+   -- 注意，先运行虚拟环境 env/Scripts/activate.bat
+   paster controller greeting
+
+
+
 2010.07.24
 -----------
 
