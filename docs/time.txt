@@ -5,7 +5,9 @@
    16:40 - 17:07
    17:15 - 17:57
    http://pylonsbook.com/en/1.1/using-view-templates.html#applying-filters-in-templates
-   20:10 -
+   20:10 - 22:02
+   http://pylonsbook.com/en/1.1/using-view-templates.html#next-namespace
+   http://localhost:5000/greeting/index -- 出错
 
 2010.07.24
 -----------

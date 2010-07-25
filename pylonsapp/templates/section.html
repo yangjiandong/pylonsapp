@@ -1,10 +1,12 @@
+# -*- coding: utf-8 -*-
+
 <%inherit file="/base.html"/>
 <%namespace file="/navigation.html" import="navigation_links" />
 
-${navigation_links('James', links = [
-    ('James', 'http://jimmyg.org'),
-    ('Ben', 'http://groovie.org'),
-    ('Philip', 'http://groovie.org')
+${navigation_links('Admin Home', links=[
+    ('Admin Home', '/admin'),
+    ('Settings', '/admin/settings'),
+    ('Sign Out', '/admin/signout'),
 ])}
 
 ${self.body()}
