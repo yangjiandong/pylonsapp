@@ -15,9 +15,9 @@ ${navigation_links('James', items)}
 <%def name="navigation_links(selected, links)">
     <%def name="link(label, url)">
         %if url:
-            <a href="${url}">${label}</a>
+            a
         %else:
-            ${label}
+            b
         %endif
     </%def>
 
