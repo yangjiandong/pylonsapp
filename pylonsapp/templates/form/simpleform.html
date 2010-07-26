@@ -1,7 +1,12 @@
 <%inherit file="/form/base.html" />
 <h1>Enter Your Email Address</h1>
 
-<form name="test" method="get" action="/formtest/submit">
-Email Address: <input type="text" name="email" />
-               <input type="submit" name="submit" value="Submit" />
-</form>
+## <form name="test" method="get" action="/formtest/submit">
+## Email Address: <input type="text" name="email" />
+##               <input type="submit" name="submit" value="Submit" />
+## </form>
+
+${h.form(h.url_for(controller='formtest', action='submit'), method='get')}
+电子邮箱: ${h.text('email','yang@gmail.com',class_='wide')}
+               ${h.submit('submit', ' 确定 ')}
+${h.end_form()}

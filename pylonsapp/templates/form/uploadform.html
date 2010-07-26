@@ -1,0 +1,9 @@
+<%inherit file="/form/base.html" />
+<h1>Upload a File</h1>
+
+
+${h.form(h.url_for(controller='upload', action='upload'), multipart=True)}
+Upload file:      ${h.file('myfile')} <br />
+Description:      ${h.text('description')} <br />
+                  ${h.submit('submit', 'Submit')}
+${h.end_form()}

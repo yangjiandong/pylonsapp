@@ -12,6 +12,8 @@ from routes import url_for
 from webhelpers.html import literal,HTML
 from pylons.controllers.util import abort, redirect_to
 
+from webhelpers.html.tags import *
+
 def format_environ(environ):
     result = []
     keys = environ.keys()

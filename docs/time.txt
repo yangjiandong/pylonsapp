@@ -4,6 +4,8 @@
 1. 19:25 - 20:02
    20:06 - 20:42
    http://pylonsbook.com/en/1.1/working-with-forms-and-validators.html#building-forms-with-helpers
+   22:30 - 23:07
+   http://pylonsbook.com/en/1.1/working-with-forms-and-validators.html#uploading-files
 
 2010.07.25
 -----------
