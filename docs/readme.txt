@@ -25,8 +25,6 @@ config['pylons.app_globals'].mako_lookup = TemplateLookup(
    -- 注意，先运行虚拟环境 env/Scripts/activate.bat
    paster controller greeting
 
-
-
 2010.07.24
 -----------
 

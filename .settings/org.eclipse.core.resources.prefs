@@ -1,7 +1,9 @@
-#Sun Jul 25 21:57:12 CST 2010
+#Mon Jul 26 20:24:05 CST 2010
 eclipse.preferences.version=1
+encoding//data/templates/navigation.html.py=utf-8
 encoding//pylonsapp/config/environment.py=utf-8
 encoding//pylonsapp/controllers/error.py=utf-8
+encoding//pylonsapp/controllers/formtest.py=utf-8
 encoding//pylonsapp/controllers/greeting.py=utf-8
 encoding//pylonsapp/controllers/hello.py=utf-8
 encoding//pylonsapp/lib/app_globals.py=utf-8

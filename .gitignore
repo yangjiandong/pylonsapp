@@ -22,3 +22,4 @@ dist
 *.pyo
 *.tmp*
 data/templates
+data/cache

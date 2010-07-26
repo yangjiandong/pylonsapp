@@ -1,14 +1,12 @@
-# -*- coding: utf-8 -*-
-
 <%inherit file="/base.html"/>
 <%namespace file="/navigation.html" import="navigation_links" />
 
 ${navigation_links('Admin Home', links=[
-    ('Admin Home', '/admin'),
-    ('Settings', '/admin/settings'),
-    ('Sign Out', '/admin/signout'),
+    ('系统管理员', '/admin'),
+    ('设置', '/admin/settings'),
+    ('注销', '/admin/signout'),
 ])}
 
-${self.body()}
+${next.body()}
 
 <%def name="title()">User Administration</%def>

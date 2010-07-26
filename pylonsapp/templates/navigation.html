@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 <%
-items = [
+    items = [
         ('James', 'http://jimmyg.org'),
         ('Ben', 'http://groovie.org'),
         ('Philip', ''),
@@ -10,18 +10,16 @@ items = [
 
 ${navigation_links('James', items)}
 
-# 采用<%def 定义一个函数
-
 <%def name="navigation_links(selected, links)">
     <%def name="link(label, url)">
-        %if url:
-            a
-        %else:
-            b
-        %endif
+        % if url:
+            <a href="${url}">${label}</a>
+        % else:
+            ${label}
+        % endif
     </%def>
 
-
+    <ul>
     % for item in links:
         <li>\
     % if item[0] == selected:

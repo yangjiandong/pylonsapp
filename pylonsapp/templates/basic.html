@@ -1,0 +1,72 @@
+The value of 3 + 5 is: ${3 + 5}
+A string representation of 3 to the power 4 is ${pow(3, 4)}
+
+## This is a comment which will not be rendered
+This will be rendered ## and so will this.
+
+<%doc>
+    This is a multiline comment which will not be rendered. This style of
+    comment is particularly useful for documentation as well as situations where
+    you want to comment out a large region of your template temporarily during
+    testing.
+</%doc>
+
+<%text>
+    This is some Mako syntax which will not be executed: ${variable}
+    Neither will this <%doc>be treated as a comment</%doc>
+</%text>
+
+<%
+    c.name = 'James'
+%>
+
+% if c.name == 'Pylons Developer':
+    Welcome Pylons Developer
+% else:
+    Welcome guest
+  % endif
+
+<%
+    c.links = [
+        ('James','http://jimmyg.org'),
+        ('Ben','http://groovie.org'),
+        ('Philip',''),
+    ]
+%>
+
+<ul>
+% for item in c.links:
+    <li>\
+% if item[1]:
+    <a href="${item[1]}">${item[0]}</a>\
+% else:
+    ${item[0]}\
+% endif
+    </li>
+% endfor
+</ul>
+
+
+<%
+    title = 'Pylons Developer'
+    names = [x[0] for x in c.links]
+%>
+% for i, value in enumerate(names):
+${i+1}. ${value} <br />
+% endfor
+
+Your title is ${title}
+   <%
+         # This block can have any indentation as long as the Python
+         # code within it is properly indented
+         if title == 'Pylons Developer':
+             msg = 'You must program in Python!'
+         else:
+             msg = ''
+     %>
+An optional message: ${msg}
+
+<%!
+    import datetime
+%>
+

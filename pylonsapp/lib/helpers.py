@@ -10,6 +10,7 @@ available to Controllers. This module is available to templates as 'h'.
 
 from routes import url_for
 from webhelpers.html import literal,HTML
+from pylons.controllers.util import abort, redirect_to
 
 def format_environ(environ):
     result = []
