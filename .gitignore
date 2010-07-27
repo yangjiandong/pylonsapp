@@ -21,5 +21,6 @@ dist
 *.pyc
 *.pyo
 *.tmp*
+data
 data/templates
 data/cache
