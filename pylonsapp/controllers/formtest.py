@@ -8,17 +8,27 @@ import pylonsapp.lib.helpers as h
 
 from pylonsapp.lib.base import BaseController, render
 
-
 log = logging.getLogger(__name__)
+
+import formencode
+from formencode import htmlfill
+
+class EmailForm(formencode.Schema):
+    allow_extra_fields = True
+    filter_extra_fields = True
+    email = formencode.validators.Email(not_empty=True)
+    date = formencode.validators.DateConverter(not_empty=True)
 
 class FormtestController(BaseController):
 
     def index(self):
+        #c.email_msg = ''
         return render('/form/simpleform.html')
 
     def submit(self):
         #return 'Your email is : %s' % request.params['email']
         #h.redirect_to(controller='formtest', action='result')
+        log.info('submit formtest')
 
         # 增加验证
         c.email_msg = ''
@@ -42,6 +52,25 @@ class FormtestController(BaseController):
 
         return  'Your email is: %s' % request.params['email']
 
+    # 采用EmailForm
+    def submit2(self):
+        schema = EmailForm()
+        try:
+            c.form_result = schema.to_python(dict(request.params))
+        except formencode.Invalid, error:
+            c.form_result = error.value
+            c.form_errors = error.error_dict or {}
+            html = render('/form/simpleform.html')
+            return htmlfill.render(
+                                   html,
+                                   defaults=c.form_result,
+                                   errors=c.form_errors)
+
+        else:
+            return 'Your e-mail is: %s and the date selected was %r.' % (
+                c.form_result['email'],
+                c.form_result['date'],
+            )
 
 
     def result(self):

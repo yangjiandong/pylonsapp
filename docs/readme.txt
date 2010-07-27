@@ -1,6 +1,15 @@
 pylons 0.9.7
 ===============
 
+2010.07.27
+----------
+
+1. environment
+    # 采用明确取值 http://pylonsbook.com/en/1.1/exploring-pylons.html#context-object
+    # config['pylons.strict_c'] = True
+
+    设置为True后，程序中没有定义的变量，页面上应用时会报错，所以还是不设为好
+
 2010.07.25
 ----------
 

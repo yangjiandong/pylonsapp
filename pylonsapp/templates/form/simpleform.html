@@ -6,8 +6,19 @@
 ##               <input type="submit" name="submit" value="Submit" />
 ## </form>
 
-${h.form(h.url_for(controller='formtest', action='submit'), method='get')}
+## submit
+## ${h.form(h.url_for(controller='formtest', action='submit'), method='get')}
+## % if c.email_msg:
+##   <span class="error-message">${c.email_msg}</span><br/>
+## % endif
 
-电子邮箱: ${h.text('email','yang@gmail.com',class_='wide')}
-               ${h.submit('submit', ' 确定 ')}
+## 电子邮箱: ${h.text('email','yang@gmail.com',class_='wide')}
+##                ${h.submit('submit', ' 确定 ')}
+## ${h.end_form()}
+
+${h.form(h.url_for(controller='formtest', action='submit2'), method='get')}
+<p>E-mail Address: ${h.text('email')}</p>
+<p>Date:           ${h.text('date')}</p>
+<p>                ${h.submit('submit', 'Submit')}</p>
 ${h.end_form()}
+</form>

@@ -47,4 +47,4 @@ def load_environment(global_conf, app_conf):
     # any Pylons config options)
 
     # 采用明确取值 http://pylonsbook.com/en/1.1/exploring-pylons.html#context-object
-    config['pylons.strict_c'] = True
+    # config['pylons.strict_c'] = True
