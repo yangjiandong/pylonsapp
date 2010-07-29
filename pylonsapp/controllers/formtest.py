@@ -7,17 +7,23 @@ from pylons import request, response, session, tmpl_context as c
 import pylonsapp.lib.helpers as h
 
 from pylonsapp.lib.base import BaseController, render
+from paste.errordocument import custom_forward
 
 log = logging.getLogger(__name__)
 
 import formencode
 from formencode import htmlfill
 
+# 自定义验证
+class CNDateConverter(formencode.validators.DateConverter):
+    month_style = 'dd/mm/yyyy'
+
 class EmailForm(formencode.Schema):
     allow_extra_fields = True
     filter_extra_fields = True
     email = formencode.validators.Email(not_empty=True)
-    date = formencode.validators.DateConverter(not_empty=True)
+    #date = formencode.validators.DateConverter(not_empty=True)
+    date = CNDateConverter(not_empty=True)
 
 class FormtestController(BaseController):
 
@@ -53,6 +59,7 @@ class FormtestController(BaseController):
         return  'Your email is: %s' % request.params['email']
 
     # 采用EmailForm
+    # 验证信息自动为中文?
     def submit2(self):
         schema = EmailForm()
         try:
@@ -75,3 +82,21 @@ class FormtestController(BaseController):
 
     def result(self):
         return 'Your data was successfully submitted.'
+
+    from pylons.decorators import validate
+
+    # 自定出错信息格式
+    def custom_formatter(error):
+        return '<span class="custom-message">%s</span><br />\n' % (
+                htmlfill.html_quote(error)
+        )
+
+    # 采用标注方式
+    @validate(schema=EmailForm(), form='index', post_only=False, on_get=True,
+              auto_error_formatter=custom_formatter)
+    def submit3(self):
+        return 'Your email is: %s and the date selected was %r.' % (
+                self.form_result['email'],
+                self.form_result['date'],
+                )
+

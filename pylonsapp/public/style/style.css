@@ -2,3 +2,8 @@ span.error-message {
     font-weight: bold;
     color: #f00;
 }
+
+span.custom-message{
+
+    color:#f00;background:#300
+}

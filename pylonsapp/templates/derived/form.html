@@ -1,0 +1,58 @@
+<%inherit file="/base/index.html" />
+
+<%def name="study()">
+    <fieldset><legend>Study</legend>
+
+        <label for="title">Title</label><br />
+        ${h.text(name="title", id="title")}<br />
+
+        <label for="start_date">Start Date</label><br />
+        ${h.text(name="start_date", id="startdate")}<br />
+
+        <label for="end_date">End Date</label><br />
+        ${h.text(name="end_date", id="enddate")}<br />
+    </fieldset><br />
+        % for id in range(c.number_of_people):
+            ${person(id=id)}
+        % endfor
+</%def>
+
+<%def name="person(id)">
+    <fieldset><legend>Person</legend>
+
+        <label for="person-${id}.title">Title</label><br />
+        ${h.text(name="person-%s.title"%(id), id="person-%s.title"%(id))}<br />
+
+        <label for="person-${id}.firstname">First Name</label><br />
+        ${h.text(
+            name="person-%s.firstname"%(id),
+            id="person-%s.firstname"%(id
+        ))}<br />
+
+        <label for="person-${id}.surname">Surname</label><br />
+        ${h.text(name="person-%s.surname"%(id), id="person-%s.surname"%(id))}<br />
+
+        <label for="person-${id}.role">Role</label><br />
+        ${h.select(
+            "person-%s.role"%(id),
+            [],
+            [
+                ['1', 'Chief Investigator'],
+                ['2', 'Assistant'],
+                ['3', 'Student'],
+            ],
+            id="person-%s.role"%(id),
+        )}<br />
+
+        ${h.submit(name="action", value="Remove %s"%(id))}
+
+    </fieldset><br />
+</%def>
+
+<h1>Create a Study</h1>
+
+${h.form(h.url_for(controller='study', action='process'))}
+${study()}
+${h.submit(name="action", value="Save")}
+${h.submit(name="action", value="Add New Person")}
+${h.end_form()}

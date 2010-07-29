@@ -1,3 +1,12 @@
+2010.07.29
+----------
+
+1. 20:29 - 21:32
+   http://pylonsbook.com/en/1.1/working-with-forms-and-validators.html#using-custom-validators
+   21:41 - 23:23
+   http://pylonsbook.com/en/1.1/working-with-forms-and-validators.html#solving-the-repeating-fields-problem
+
+
 2010.07.27
 ----------
 
