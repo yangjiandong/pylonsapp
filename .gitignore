@@ -24,3 +24,5 @@ dist
 data
 data/templates
 data/cache
+development.db
+pylonsApp.egg-info

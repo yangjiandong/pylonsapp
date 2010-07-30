@@ -1,3 +1,27 @@
+2010.07.30
+----------
+
+1. 19:57 - 20:20
+   pylons 结合其他python技术，处理html是有一套!但还要看下在实际项目是开发是否方便。
+   现在主要的思路还是json + extjs，感觉比开发传统html要方便，但如果不需要extjs，掌握html还是有必要的。
+
+   其他章节跳过直接看下面
+   http://pylonsbook.com/en/1.1/introducing-the-model-and-sqlalchemy.html#setting-up-sqlalchemy
+   列出相关数据库和python 支持库
+
+   http://pylonsbook.com/en/1.1/introducing-the-model-and-sqlalchemy.html#more-metadata
+
+   20:37 - 21:58
+
+   page
+
+   http://pylonsbook.com/en/1.1/starting-the-simplesite-tutorial.html#creating-the-model
+   根据python代码生成后台表
+   $ python setup.py develop
+   $ paster setup-app development.ini
+
+   http://pylonsbook.com/en/1.1/starting-the-simplesite-tutorial.html#querying-data
+
 2010.07.29
 ----------
 
