@@ -1,0 +1,14 @@
+<%inherit file="/base/page-index.html" />
+
+<%def name="heading()">
+    <h1 class="main">Page List</h1>
+</%def>
+
+<ul id="titles">
+% for page in c.pages:
+<li>
+    ${page.title} [${h.link_to('访问', h.url_for(controller='page', action='view',
+        id=page.id))}]
+</li>
+% endfor
+</ul>

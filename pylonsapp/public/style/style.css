@@ -1,4 +1,4 @@
-span.error-message {
+span.error-message, span.required {
     font-weight: bold;
     color: #f00;
 }

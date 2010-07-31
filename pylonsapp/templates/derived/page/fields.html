@@ -1,0 +1,17 @@
+${h.field(
+    "Heading",
+    h.text(name='heading'),
+    required=False,
+)}
+${h.field(
+    "标题",
+    h.text(name='title'),
+    required=True,
+    field_desc = "Used as the heading too if you didn't specify one above"
+)}
+${h.field(
+    "内容",
+    h.textarea(name='content', rows=7, cols=40),
+    required=True,
+    field_desc = 'The text that will make up the body of the page'
+)}

@@ -3,6 +3,12 @@
 
 1. 17:36 - 17:55
    http://pylonsbook.com/en/1.1/starting-the-simplesite-tutorial.html#view
+   19:22 - 21:00
+   http://pylonsbook.com/en/1.1/starting-the-simplesite-tutorial.html#updating-the-footer
+
+   myenv\0.97\env\Scripts\easy_install FormBuild-2.2.0.tar.gz (save/FormBuild-2.2.0.tar.gz)
+
+
 
 2010.07.30
 ----------

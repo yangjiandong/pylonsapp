@@ -19,7 +19,9 @@
 </html>
 
 <%def name="title()">SimpleSite</%def>
-<%def name="head()"></%def>
+<%def name="head()">
+  ${h.stylesheet_link(h.url_for('/style/style.css'))}
+</%def>
 <%def name="header()"><a name="top"></a></%def>
 <%def name="tabs()"></%def>
 <%def name="menu()"></%def>
