@@ -1,3 +1,5 @@
 <%inherit file="/base/page-index.html"/>
+<%def name="title()">${c.page.title}</%def>
+<%def name="heading()"><h1>${c.page.heading or c.page.title}</h1></%def>
 
-${c.content}
+${c.page.content}
